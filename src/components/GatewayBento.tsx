@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router'
+import { Analytics } from '@vercel/analytics/next'
 import { wix, PHOTOS } from '../lib/data'
 
 type Gate = {
@@ -18,7 +19,7 @@ const gates: Gate[] = [
     eyebrow: 'Who we are',
     title: 'About Us',
     blurb: 'Our story, vision, and the mandate that drives everything we do.',
-    image: 'https://heartworkbyleslie.com/wp-content/uploads/2025/04/a-photograph-of-a-flat-lay-composition-s_tIVD38QwTJ-dq7FeXIfuig_YEExzFaFRny0N1hSuB-FQw-574x1024.png',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2zr5bDZL9xQUdfaauCAaAJHTw2OnQ9tEmupCcrv9PLQ&s=10',
     span: 'sm:row-span-2',
     accent: 'bg-amber-500 text-slate-900',
   },
