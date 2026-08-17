@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router'
 import PageHeader from '../components/PageHeader'
 import { wix, PHOTOS, pillars } from '../lib/data'
+import storyTeamImage from '../imports/story-team.png'
 
 export default function About() {
   return (
@@ -43,11 +44,10 @@ export default function About() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="grid grid-cols-2 gap-4"
+            className="grid grid-cols-1 gap-4 max-w-sm"
           >
-            <img src={wix(PHOTOS.a, 500, 640)} alt="VOH Kenya youth" className="rounded-3xl object-cover w-full h-full row-span-2" />
-            <img src={wix(PHOTOS.c, 500, 400)} alt="A VOH gathering" className="rounded-3xl object-cover w-full h-full" />
-            <img src={wix(PHOTOS.f, 500, 400)} alt="Worship at VOH" className="rounded-3xl object-cover w-full h-full" />
+            <img src="https://images.squarespace-cdn.com/content/v1/5d362019ffd9130001cab4ce/e8be701c-9975-44db-8c65-1959ce444481/discipleshiptools.jpg" alt="A VOH gathering" className="rounded-3xl object-contain w-full h-64 bg-slate-100" />
+            <img src={wix(PHOTOS.f, 500, 400)} alt="Worship at VOH" className="rounded-3xl object-contain w-full h-64 bg-slate-100" />
           </motion.div>
         </div>
       </section>

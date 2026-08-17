@@ -10,6 +10,7 @@
     "format": "oxfmt"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "12.23.12",
     "hono": "^4.13.2",

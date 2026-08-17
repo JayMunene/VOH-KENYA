@@ -2,9 +2,11 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router'
 import { Analytics } from '@vercel/analytics/next'
 import { wix, PHOTOS } from '../lib/data'
-import aboutUsImage from '../imports/about-us-new.jpg'
+import aboutUsImage from '../imports/about-us.jpg'
 import partnersImage from '../imports/partners.jpg'
 import giveSupportImage from '../imports/give-support.jpg'
+import digitalAltarImage from '../imports/digital-altar.png'
+import membershipImage from '../imports/membership.jpg'
 
 type Gate = {
   to: string
@@ -58,7 +60,7 @@ const gates: Gate[] = [
     eyebrow: 'Belong',
     title: 'Membership',
     blurb: 'Track your journey and join the community.',
-    image: wix(PHOTOS.h, 900, 520),
+    image: membershipImage,
     span: '',
     accent: 'bg-teal-500 text-white',
   },
@@ -76,7 +78,7 @@ const gates: Gate[] = [
     eyebrow: 'Testimony & prayer',
     title: 'The Digital Altar',
     blurb: 'See what God is doing — and share a prayer request.',
-    image: wix(PHOTOS.c, 900, 520),
+    image: digitalAltarImage,
     span: '',
     accent: 'bg-amber-500 text-slate-900',
   },
