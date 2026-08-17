@@ -18,7 +18,7 @@ const gates: Gate[] = [
     eyebrow: 'Who we are',
     title: 'About Us',
     blurb: 'Our story, vision, and the mandate that drives everything we do.',
-    image: wix(PHOTOS.a, 900, 1100),
+    image: 'https://heartworkbyleslie.com/wp-content/uploads/2025/04/a-photograph-of-a-flat-lay-composition-s_tIVD38QwTJ-dq7FeXIfuig_YEExzFaFRny0N1hSuB-FQw-574x1024.png',
     span: 'sm:row-span-2',
     accent: 'bg-amber-500 text-slate-900',
   },
