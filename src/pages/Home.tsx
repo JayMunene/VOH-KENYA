@@ -1,0 +1,69 @@
+import { Link } from 'react-router'
+import { motion } from 'framer-motion'
+import Hero from '../components/Hero'
+import GatewayBento from '../components/GatewayBento'
+import { stats } from '../lib/data'
+
+export default function Home() {
+  return (
+    <>
+      <Hero />
+
+      {/* Gateway directory — routes out to dedicated pages */}
+      <GatewayBento />
+
+      {/* Compact impact strip */}
+      <section className="px-5 md:px-8 pb-20 md:pb-24">
+        <div className="max-w-7xl mx-auto rounded-[28px] bg-slate-900 px-6 md:px-10 py-10 md:py-12 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-4">
+          {stats.map((s, i) => (
+            <motion.div
+              key={s.label}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="text-center sm:text-left"
+            >
+              <div className="font-display font-extrabold text-white text-4xl md:text-5xl tracking-tight">
+                {s.value.toLocaleString('en-US')}
+                {s.suffix}
+              </div>
+              <div className="font-semibold text-amber-400 text-sm mt-1">{s.label}</div>
+              <div className="text-white/45 text-xs">{s.sub}</div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Closing CTA band */}
+      <section className="px-5 md:px-8 pb-20 md:pb-28">
+        <div className="max-w-7xl mx-auto relative overflow-hidden bg-gradient-to-br from-amber-500 to-amber-400 rounded-[28px] px-8 md:px-14 py-14 md:py-20 text-center">
+          <div className="absolute top-0 right-0 w-72 h-72 bg-white/10 rounded-full translate-x-24 -translate-y-24" />
+          <div className="absolute bottom-0 left-0 w-56 h-56 bg-slate-900/10 rounded-full -translate-x-16 translate-y-20" />
+          <div className="relative">
+            <h2 className="font-display font-extrabold text-slate-900 text-3xl md:text-5xl leading-tight tracking-tight max-w-2xl mx-auto">
+              Ready to step into your calling?
+            </h2>
+            <p className="text-slate-900/70 text-base md:text-lg mt-4 max-w-xl mx-auto">
+              Join a fellowship in Nairobi and become part of a community on mission.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mt-8">
+              <Link
+                to="/fellowships"
+                className="font-display font-bold text-white bg-slate-900 hover:bg-slate-800 px-7 py-3.5 rounded-full text-sm transition-colors"
+              >
+                Find a Fellowship →
+              </Link>
+              <Link
+                to="/give"
+                className="font-display font-bold text-slate-900 bg-white/70 hover:bg-white px-7 py-3.5 rounded-full text-sm transition-colors"
+              >
+                Give / Support
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}

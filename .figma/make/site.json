@@ -1,0 +1,10 @@
+{
+  "description": "This platform connects users with vital resources and information about health and wellness in Kenya, promoting community engagement and support.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
