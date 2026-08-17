@@ -295,7 +295,7 @@ export const blogPosts: BlogPost[] = [
 ]
 
 export const stats = [
-  { value: 2400, suffix: '+', label: 'Active members', sub: 'across every program' },
+  { value: 178, suffix: '+', label: 'Active members', sub: 'across every program' },
   { value: 12, suffix: '', label: 'Campuses reached', sub: 'in Nairobi and beyond' },
   { value: 10, suffix: '+', label: 'Years of impact', sub: 'equipping a generation' },
 ]

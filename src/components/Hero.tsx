@@ -1,7 +1,6 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import MagneticButton from './MagneticButton'
-import heroImage from '../imports/360_F_878961793_KulAKtdjeKAfP1Tm8zcIEE5Zy7RVi66Y.jpg'
 
 const container = {
   hidden: {},
@@ -24,7 +23,7 @@ export default function Hero() {
         className="absolute inset-0"
       >
         <img
-          src={heroImage}
+          src="/images/360_F_878961793_KulAKtdjeKAfP1Tm8zcIEE5Zy7RVi66Y.jpg"
           alt="Young people of VOH Kenya gathered in worship"
           className="w-full h-full object-cover opacity-30 mix-blend-luminosity saturate-50"
         />

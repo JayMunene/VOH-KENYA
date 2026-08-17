@@ -2,7 +2,6 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router'
 import PageHeader from '../components/PageHeader'
 import { wix, PHOTOS, pillars } from '../lib/data'
-import storyTeamImage from '../imports/story-team.png'
 
 export default function About() {
   return (

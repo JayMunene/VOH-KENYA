@@ -2,11 +2,6 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router'
 import { Analytics } from '@vercel/analytics/next'
 import { wix, PHOTOS } from '../lib/data'
-import aboutUsImage from '../imports/about-us.jpg'
-import partnersImage from '../imports/partners.jpg'
-import giveSupportImage from '../imports/give-support.jpg'
-import digitalAltarImage from '../imports/digital-altar.png'
-import membershipImage from '../imports/membership.jpg'
 
 type Gate = {
   to: string
@@ -24,7 +19,7 @@ const gates: Gate[] = [
     eyebrow: 'Who we are',
     title: 'About Us',
     blurb: 'Our story, vision, and the mandate that drives everything we do.',
-    image: aboutUsImage,
+    image: '/images/about-us.jpg',
     span: 'sm:row-span-2',
     accent: 'bg-amber-500 text-slate-900',
   },
@@ -60,7 +55,7 @@ const gates: Gate[] = [
     eyebrow: 'Belong',
     title: 'Membership',
     blurb: 'Track your journey and join the community.',
-    image: membershipImage,
+    image: '/images/membership.jpg',
     span: '',
     accent: 'bg-teal-500 text-white',
   },
@@ -69,7 +64,7 @@ const gates: Gate[] = [
     eyebrow: 'Better together',
     title: 'Partners',
     blurb: 'The organisations we walk alongside in the mission.',
-    image: partnersImage,
+    image: '/images/partners.jpg',
     span: '',
     accent: 'bg-purple-500 text-white',
   },
@@ -78,7 +73,7 @@ const gates: Gate[] = [
     eyebrow: 'Testimony & prayer',
     title: 'The Digital Altar',
     blurb: 'See what God is doing — and share a prayer request.',
-    image: digitalAltarImage,
+    image: '/images/digital-altar.png',
     span: '',
     accent: 'bg-amber-500 text-slate-900',
   },
@@ -87,7 +82,7 @@ const gates: Gate[] = [
     eyebrow: 'Partner',
     title: 'Give & Support',
     blurb: 'Fuel discipleship, missions, and youth empowerment.',
-    image: giveSupportImage,
+    image: '/images/give-support.jpg',
     span: 'sm:col-span-2',
     accent: 'bg-cyan-500 text-slate-900',
   },
