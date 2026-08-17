@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router'
 import { wix, PHOTOS } from '../lib/data'
-import bibleStudyImage from '../imports/bible-study-notes.jpg'
 
 type Gate = {
   to: string
@@ -19,7 +18,7 @@ const gates: Gate[] = [
     eyebrow: 'Who we are',
     title: 'About Us',
     blurb: 'Our story, vision, and the mandate that drives everything we do.',
-    image: bibleStudyImage,
+    image: wix(PHOTOS.a, 900, 1100),
     span: 'sm:row-span-2',
     accent: 'bg-amber-500 text-slate-900',
   },
