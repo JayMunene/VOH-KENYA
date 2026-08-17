@@ -36,7 +36,7 @@ const gates: Gate[] = [
     eyebrow: 'Reach & equip',
     title: 'Missions & Outreach',
     blurb: 'Partnering with communities across Kenya and Africa.',
-    image: wix(PHOTOS.b, 900, 520),
+    image: 'https://static.wixstatic.com/media/d185ab_f48534e163ef4ee3a9ec8de860741b9b~mv2.jpg/v1/fill/w_640,h_448,al_c,lg_1,q_80,enc_avif,quality_auto/d185ab_f48534e163ef4ee3a9ec8de860741b9b~mv2.jpg',
     span: '',
     accent: 'bg-purple-500 text-white',
   },
