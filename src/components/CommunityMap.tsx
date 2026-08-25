@@ -69,7 +69,7 @@ export default function CommunityMap() {
                       {f.region}
                     </span>
                   </div>
-                  <div className="text-amber-300/80 text-xs mt-3">{f.day}</div>
+                  <div className="text-amber-300/80 text-xs mt-3">{f.venue}</div>
                 </motion.button>
               ))}
             </AnimatePresence>
@@ -102,9 +102,9 @@ export default function CommunityMap() {
                   </span>
                   <div className="font-display font-bold text-white text-2xl">{activeFellowship?.name}</div>
                   <div className="text-white/60 text-sm mt-1">{activeFellowship?.area}</div>
-                  <div className="text-amber-300 text-sm mt-4">{activeFellowship?.day}</div>
+                  <div className="text-amber-300 text-sm mt-4">{activeFellowship?.venue}</div>
                   <a
-                    href={`https://www.google.com/maps/search/${encodeURIComponent(activeFellowship?.area ?? 'Nairobi')}`}
+                    href={`https://www.google.com/maps/search/${encodeURIComponent(`${activeFellowship?.venue ?? ''}, ${activeFellowship?.area ?? 'Nairobi'}`)}`}
                     target="_blank"
                     rel="noreferrer"
                     className="mt-6 inline-flex items-center gap-2 text-xs font-semibold text-slate-900 bg-amber-500 hover:bg-amber-400 px-5 py-2.5 rounded-full transition-colors"

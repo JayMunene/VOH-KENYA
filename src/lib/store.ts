@@ -16,13 +16,23 @@ export const typeLabels: Record<SubmissionType, string> = {
   membership: 'Membership',
 }
 
-const BASE = `https://${projectId}.supabase.co/functions/v1/server/make-server-d6d8acf9`
+const BASE = `https://${projectId}.supabase.co/functions/v1/server`
+
+export async function checkBackend(): Promise<boolean> {
+  try {
+    const response = await fetch(`${BASE}/health`, { cache: 'no-store' })
+    return response.ok && (await response.json()).status === 'ok'
+  } catch {
+    return false
+  }
+}
 
 export async function addSubmission(
   type: SubmissionType,
   data: Record<string, string>,
 ): Promise<{ ok: boolean; error?: string }> {
   try {
+    if (!(await checkBackend())) return { ok: false, error: 'Membership service is temporarily unavailable. Please try again later.' }
     const res = await fetch(`${BASE}/submissions`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

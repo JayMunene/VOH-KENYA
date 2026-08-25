@@ -43,10 +43,14 @@ export default function About() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="grid grid-cols-1 gap-4 max-w-sm"
+            className="relative aspect-[4/3] w-full max-w-sm overflow-hidden rounded-[28px] bg-slate-100 shadow-lg shadow-slate-900/10"
           >
-            <img src="https://images.squarespace-cdn.com/content/v1/5d362019ffd9130001cab4ce/e8be701c-9975-44db-8c65-1959ce444481/discipleshiptools.jpg" alt="A VOH gathering" className="rounded-3xl object-contain w-full h-64 bg-slate-100" />
-            <img src={wix(PHOTOS.f, 500, 400)} alt="Worship at VOH" className="rounded-3xl object-contain w-full h-64 bg-slate-100" />
+            <img
+              src="https://static.wixstatic.com/media/d185ab_a77d925b8a6944b5be366a3a959efb92~mv2.jpg/v1/crop/x_772,y_0,w_2000,h_2000/fill/w_490,h_490,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC_0194_edited.jpg"
+              alt="VOH discipleship gathering"
+              className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+            />
+            <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/20" />
           </motion.div>
         </div>
       </section>

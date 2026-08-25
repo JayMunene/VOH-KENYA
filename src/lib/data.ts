@@ -165,7 +165,7 @@ export const programs: Program[] = [
     tag: 'Leadership',
     description: 'Holistic advancement for students and young professionals across every field.',
     detail: 'Professional and holistic advancement for students and young professionals in every sphere.',
-    image: wix(PHOTOS.h, 700, 900),
+    image: 'https://www.mybiblesong.com/wp-content/uploads/2025/12/praise_and_worship_songs_collection_51cvk.jpg',
     tagBg: 'bg-purple-600 text-white',
   },
   {
@@ -183,7 +183,7 @@ export const programs: Program[] = [
     tag: 'Worship',
     description: 'Raising a generation of worshippers and musicians for the glory of God.',
     detail: 'Cultivating gifted worshippers and musicians who lead a generation into the presence of God.',
-    image: wix(PHOTOS.j, 700, 900),
+    image: 'https://static.wixstatic.com/media/d185ab_d27d99caa8f24d69a926413bb9e1bbe3~mv2.jpg/v1/crop/x_0,y_373,w_2254,h_2254/fill/w_490,h_490,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_4516_edited.jpg',
     tagBg: 'bg-cyan-500 text-slate-900',
   },
 ]
@@ -208,10 +208,10 @@ export const programDetails: Record<string, {
     video: 'https://youtu.be/cPxqv491KQI',
   },
   move: {
-    long: "The Move! is VOH Kenya's flagship interdenominational youth movement — raising Vessels of Honor who will influence leadership in Africa and the world. Daily prayer (Arise and Pray!) runs every weekday morning via Zoom, while gatherings at Garden Estate, Nairobi bring teens and young adults together for worship, the Word, and authentic community.",
-    meets: 'Mon–Fri · 5:00–6:00 am · Prayer via Zoom · Garden Estate, Nairobi',
+    long: "The Move! is VOH Kenya's flagship interdenominational youth movement — raising Vessels of Honor who will influence leadership in Africa and the world. We gather physically every third Saturday of the month, bringing teens and young adults together for worship, the Word, and authentic community.",
+    meets: 'Every third Saturday of the month · Physical gathering',
     scripture: '"Don\'t let anyone look down on you because you are young." — 1 Timothy 4:12',
-    highlights: ['Daily Zoom prayer (Arise & Pray!)', 'Live worship', 'Relevant teaching', 'Small-group connect', 'Serving opportunities'],
+    highlights: ['Third-Saturday physical gathering', 'Live worship', 'Relevant teaching', 'Small-group connect', 'Serving opportunities'],
     joinUrl: 'mailto:info@vohkenya.org?subject=Joining%20The%20Move',
   },
   'bible-club': {
@@ -357,17 +357,14 @@ export type Fellowship = {
   id: string
   name: string
   area: string
-  day: string
+  venue: string
   region: 'Nairobi' | 'Beyond'
 }
 
 export const fellowships: Fellowship[] = [
-  { id: 'f1', name: 'Garden Estate (HQ)', area: 'Garden Estate, Nairobi', day: 'Sundays', region: 'Nairobi' },
-  { id: 'f2', name: 'Westlands Fellowship', area: 'Westlands, Nairobi', day: 'Fridays · 6:00 pm', region: 'Nairobi' },
-  { id: 'f3', name: 'Kilimani Fellowship', area: 'Kilimani, Nairobi', day: 'Wednesdays · 6:30 pm', region: 'Nairobi' },
-  { id: 'f4', name: 'Roysambu Fellowship', area: 'Roysambu, Nairobi', day: 'Thursdays · 6:00 pm', region: 'Nairobi' },
-  { id: 'f5', name: 'Thika Fellowship', area: 'Thika Town', day: 'Saturdays · 4:00 pm', region: 'Beyond' },
-  { id: 'f6', name: 'Nakuru Fellowship', area: 'Nakuru CBD', day: 'Saturdays · 5:00 pm', region: 'Beyond' },
+  { id: 'f1', name: 'Along Thika Road', area: 'Thika Road, Nairobi', venue: 'Ruaraka Baptist Youth Church', region: 'Nairobi' },
+  { id: 'f2', name: 'Town / CBD', area: 'Dennis Pritt Road, Nairobi', venue: 'Biblica', region: 'Nairobi' },
+  { id: 'f3', name: 'Juja', area: 'Juja, Kiambu County', venue: 'Juja fellowship', region: 'Beyond' },
 ]
 
 export const socials = [

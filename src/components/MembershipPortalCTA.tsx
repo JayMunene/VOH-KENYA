@@ -40,7 +40,7 @@ export default function MembershipPortalCTA() {
             strength={0.4}
             className="inline-block font-display font-bold text-white bg-slate-900 hover:bg-slate-800 px-7 py-3.5 rounded-full text-sm transition-colors"
           >
-            Become a Member →
+            Coming Soon
           </MagneticButton>
         </div>
 
