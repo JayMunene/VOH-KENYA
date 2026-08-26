@@ -11,11 +11,12 @@ type Props = {
   image: string
   crumbs?: Crumb[]
   children?: ReactNode
+  compact?: boolean
 }
 
-export default function PageHeader({ eyebrow, title, intro, image, crumbs, children }: Props) {
+export default function PageHeader({ eyebrow, title, intro, image, crumbs, children, compact = false }: Props) {
   return (
-    <section className="relative overflow-hidden bg-slate-900 pt-32 pb-16 md:pt-40 md:pb-24">
+    <section className={`relative overflow-hidden bg-slate-900 ${compact ? 'pt-24 pb-12 md:pt-28 md:pb-16' : 'pt-32 pb-16 md:pt-40 md:pb-24'}`}>
       <motion.img
         initial={{ scale: 1.1, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -23,7 +24,7 @@ export default function PageHeader({ eyebrow, title, intro, image, crumbs, child
         src={image}
         alt=""
         aria-hidden
-        className="absolute inset-0 w-full h-full object-cover"
+        className={`absolute inset-0 w-full h-full ${compact ? 'object-contain' : 'object-cover'}`}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/75 to-slate-900/95" />
       <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[500px] h-[240px] bg-amber-500/15 rounded-full blur-3xl" />

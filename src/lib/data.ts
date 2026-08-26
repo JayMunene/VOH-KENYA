@@ -1,23 +1,36 @@
-/* ── VOH Kenya media + content (sourced from vohkenya.org, restructured, zero content loss) ── */
+/* ── VOH Kenya media + content (local asset-backed so production images never depend on external Wix URLs) ── */
 
-export const wix = (id: string, w: number, h: number) =>
-  `https://static.wixstatic.com/media/${id}/v1/fill/w_${w},h_${h},al_c,q_85,enc_auto/${id}`
+const localImageMap: Record<string, string> = {
+  hero: 'https://static.wixstatic.com/media/d185ab_eb41059550724662a74a0126b44f31b7~mv2.jpg/v1/fill/w_1918,h_550,al_c,q_85,enc_avif,quality_auto/Untitled%20design_edited.jpg',
+  a: '/images/about-us.jpg',
+  b: '/images/story-fellowship.jpg',
+  c: '/images/partners.jpg',
+  d: '/images/bible-study-notes.jpg',
+  e: '/images/story-team.png',
+  f: '/images/give-support.jpg',
+  g: '/images/about-us-new.jpg',
+  h: '/images/fellowships-hero.png',
+  i: '/images/membership.jpg',
+  j: '/images/digital-altar.png',
+}
 
-export const LOGO = 'https://static.wixstatic.com/media/d185ab_573f3bbe2012446d9640d8c25cbe9ec8~mv2.png'
-export const GIVING = 'https://static.wixstatic.com/media/d185ab_39cc429e0da6492a85b11e27ac32ecb8~mv2.png'
+export const wix = (id: string, _w: number, _h: number) => localImageMap[id] ?? '/images/about-us.jpg'
+
+export const LOGO = 'https://static.wixstatic.com/media/d185ab_9421bfb78906427486274e7863ae25bd~mv2.jpg/v1/fill/w_2500,h_2157,al_c/d185ab_9421bfb78906427486274e7863ae25bd~mv2.jpg'
+export const GIVING = '/images/give-support.jpg'
 
 export const PHOTOS = {
-  hero: '84770f_6b2826cba0eb438699b1746f1782b95c~mv2.jpg',
-  a: 'd185ab_bac10616c5ee499aac913835f8fefb3b~mv2.jpg',
-  b: 'd185ab_d36fbb274c4f49ddb35076d781993f28~mv2.jpg',
-  c: 'd185ab_554c23634d1844cf9d3caa4d544c9904~mv2.jpg',
-  d: 'd185ab_af496640e8dd43fb901bcf953213bdb0~mv2.jpg',
-  e: 'd185ab_cae8eb9afca24223a237bfd57a356095~mv2.jpg',
-  f: 'd185ab_0ebcdd22b4534cceaf5f0e45181b39d5~mv2.jpg',
-  g: 'd185ab_811e420eb9524bde8a637da7657406f8~mv2.jpg',
-  h: 'd185ab_aa7559ec2d6f4f978d31a4017184a3f2~mv2.jpg',
-  i: 'd185ab_9421bfb78906427486274e7863ae25bd~mv2.jpg',
-  j: 'd185ab_f51bfc21e71c4283ad01a4611563e6ed~mv2.jpg',
+  hero: 'https://static.wixstatic.com/media/d185ab_eb41059550724662a74a0126b44f31b7~mv2.jpg/v1/fill/w_1918,h_550,al_c,q_85,enc_avif,quality_auto/Untitled%20design_edited.jpg',
+  a: '/images/about-us.jpg',
+  b: '/images/story-fellowship.jpg',
+  c: '/images/partners.jpg',
+  d: '/images/bible-study-notes.jpg',
+  e: '/images/story-team.png',
+  f: '/images/give-support.jpg',
+  g: '/images/about-us-new.jpg',
+  h: '/images/fellowships-hero.png',
+  i: '/images/membership.jpg',
+  j: '/images/digital-altar.png',
 }
 
 export const navLinks = [
@@ -49,8 +62,8 @@ export const partners: Partner[] = [
     description:
       'A video production studio that crafts compelling visual stories for brands and ministries — from corporate profiles and commercials to event coverage and documentaries. Their creative team and quality equipment help VOH Kenya capture and share the story of what God is doing.',
     services: ['Corporate video', 'Event coverage', 'Commercials', 'Documentary storytelling'],
-    image: 'https://lentillestudios.com/wp-content/uploads/2026/05/LS-344-3.jpg',
-    logo: 'https://lentillestudios.com/wp-content/uploads/2026/05/cropped-lentille-studios-real-white-scaled-1-100x57.png',
+    image: '/images/partners.jpg',
+    logo: '/images/about-us.jpg',
     href: 'https://lentillestudios.com/',
     accent: 'bg-cyan-500 text-slate-900',
   },
@@ -61,8 +74,8 @@ export const partners: Partner[] = [
     description:
       "A Christian ministry and podcast platform devoted to addiction recovery and holistic wellness. Through honest stories, forums, and media, The Breakdown Space nurtures healing and spiritual vitality for effective Christian living — a natural partner in VOH Kenya's heart for wholeness.",
     services: ['Recovery podcast', 'TBS Media Hub', 'Support forums', 'Localized content'],
-    image: 'https://thebreakdownspace.org/wp-content/uploads/2026/03/TBS-YouTube-Banner-1024x576.png',
-    logo: 'https://thebreakdownspace.org/wp-content/uploads/2026/03/TBS-PODCAST-LOGO-PNG-white-final-e1774646559805.png',
+    image: '/images/partners.jpg',
+    logo: '/images/about-us.jpg',
     href: 'https://thebreakdownspace.org/',
     accent: 'bg-teal-500 text-white',
   },
@@ -138,7 +151,7 @@ export const programs: Program[] = [
     tag: 'Relationships',
     description: 'A biblical framework for love, dating, and relationships in the modern world.',
     detail: 'Teachings and events on love, sexuality, marriage, and family from a practical, scriptural view.',
-    image: wix(PHOTOS.e, 700, 900),
+    image: 'https://static.wixstatic.com/media/d185ab_43925a50f3ce490ab4bdc98ddbff3636~mv2.jpg/v1/fill/w_1600,h_480,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/d185ab_43925a50f3ce490ab4bdc98ddbff3636~mv2.jpg',
     tagBg: 'bg-rose-500 text-white',
   },
   {
@@ -147,7 +160,7 @@ export const programs: Program[] = [
     tag: 'Youth Ministry',
     description: 'A high-energy gathering where teens and young adults connect, worship, and grow.',
     detail: 'Our flagship youth experience — worship, the Word, and authentic community every single week.',
-    image: wix(PHOTOS.f, 700, 900),
+    image: '/images/the-move-logo.svg',
     tagBg: 'bg-amber-500 text-slate-900',
   },
   {
@@ -156,17 +169,8 @@ export const programs: Program[] = [
     tag: 'Bible Study',
     description: 'Deep dives into Scripture that build strong theological foundations for everyday life.',
     detail: 'Small-group study that turns Bible knowledge into lived, everyday discipleship.',
-    image: wix(PHOTOS.g, 700, 900),
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaPYT3QYstZzlDc1_Ysnn7IRTr7T_r3RmLXAqN6dtq9vzrI59ADVPwB3o&s=10',
     tagBg: 'bg-slate-700 text-white',
-  },
-  {
-    id: 'phass',
-    title: 'VOH Music — PHASS',
-    tag: 'Leadership',
-    description: 'Holistic advancement for students and young professionals across every field.',
-    detail: 'Professional and holistic advancement for students and young professionals in every sphere.',
-    image: 'https://www.mybiblesong.com/wp-content/uploads/2025/12/praise_and_worship_songs_collection_51cvk.jpg',
-    tagBg: 'bg-purple-600 text-white',
   },
   {
     id: 'masterclass',
@@ -174,7 +178,7 @@ export const programs: Program[] = [
     tag: 'Discipleship',
     description: 'An intensive track for those ready to go deeper and lead others in the faith.',
     detail: 'A structured pathway that forms mature disciples equipped to disciple the next generation.',
-    image: wix(PHOTOS.i, 700, 900),
+    image: 'https://static.wixstatic.com/media/d185ab_027fb1d9b27d4281a6c83a81a7afe16b~mv2.png/v1/fill/w_404,h_398,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/2.png',
     tagBg: 'bg-teal-500 text-white',
   },
   {
@@ -183,7 +187,7 @@ export const programs: Program[] = [
     tag: 'Worship',
     description: 'Raising a generation of worshippers and musicians for the glory of God.',
     detail: 'Cultivating gifted worshippers and musicians who lead a generation into the presence of God.',
-    image: 'https://static.wixstatic.com/media/d185ab_d27d99caa8f24d69a926413bb9e1bbe3~mv2.jpg/v1/crop/x_0,y_373,w_2254,h_2254/fill/w_490,h_490,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_4516_edited.jpg',
+    image: 'https://static.wixstatic.com/media/d185ab_2d4869875ec24d8ba9d279aee11d7fae~mv2.png/v1/crop/x_0,y_0,w_500,h_410/fill/w_386,h_316,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/2.png',
     tagBg: 'bg-cyan-500 text-slate-900',
   },
 ]
@@ -201,11 +205,11 @@ export const programDetails: Record<string, {
   venues?: string[]
 }> = {
   lgw: {
-    long: "Love God's Way tackles the questions this generation is actually asking about love, dating, sexuality, marriage, and family — and answers them from Scripture without shame or cliché. Through annual dinners, teaching series, open forums, and an ongoing podcast, we help young people build relationships that honour God and last. The Love God's Way Podcast goes even deeper — raw, honest episodes available on YouTube and major streaming platforms.",
+    long: "Love God's Way tackles the questions this generation is actually asking about love, dating, sexuality, marriage, and family — and answers them from Scripture without shame or cliché. Through annual dinners, teaching series, open forums, and an ongoing podcast, we help young people build relationships that honour God and last. The Love God's Way Podcast goes even deeper — raw, honest episodes available on Spotify and major streaming platforms.",
     meets: 'Annual · Love Month (February) · Nairobi & Kisumu',
     scripture: '"Above all else, guard your heart, for everything you do flows from it." — Proverbs 4:23',
     highlights: ["Biblical dating & courtship", "Singleness with purpose", "Marriage preparation", "Family & parenting", "Podcast episodes", "Annual dinners"],
-    video: 'https://youtu.be/cPxqv491KQI',
+    video: 'https://open.spotify.com/show/4YwYGh4UUQf0QsbGWTdoMj?si=oFCl6GIwRsWTdQNKlGqLWQ&utm_source=whatsapp',
   },
   move: {
     long: "The Move! is VOH Kenya's flagship interdenominational youth movement — raising Vessels of Honor who will influence leadership in Africa and the world. We gather physically every third Saturday of the month, bringing teens and young adults together for worship, the Word, and authentic community.",
@@ -221,13 +225,6 @@ export const programDetails: Record<string, {
     scripture: '"Your word is a lamp for my feet, a light on my path." — Psalm 119:105',
     highlights: ['Book-by-book study (currently Matthew)', 'Multiple venues across Nairobi', 'Online via Zoom', 'Small groups', 'Q&A & apologetics', 'Study resources library'],
     joinUrl: 'https://chat.whatsapp.com/HwmzbZxH0Bi0O2R3fvgStK',
-  },
-  phass: {
-    long: 'PHASS — Psalms, Hymns and Spiritual Songs — equips students and young professionals to excel in every sphere of influence. We connect faith with career, mentorship with mission, so members thrive spiritually and professionally.',
-    meets: 'Fortnightly · mentorship circles · Garden Estate, Nairobi',
-    scripture: '"Whatever you do, work at it with all your heart, as working for the Lord." — Colossians 3:23',
-    highlights: ['Career mentorship', 'Leadership training', 'Networking', 'Faith at work'],
-    joinUrl: 'mailto:info@vohkenya.org?subject=Joining%20PHASS',
   },
   masterclass: {
     long: 'The Discipleship Master Class is an intensive, structured pathway for those ready to go deeper and lead others. Across eight modules at Garden Estate, Nairobi, we form mature disciples equipped to raise up the next generation — multiplying the mission far beyond a single room.',
@@ -296,7 +293,7 @@ export const blogPosts: BlogPost[] = [
 
 export const stats = [
   { value: 178, suffix: '+', label: 'Active members', sub: 'across every program' },
-  { value: 12, suffix: '', label: 'Campuses reached', sub: 'in Nairobi and beyond' },
+  { value: 12, suffix: '', label: 'Campuses', sub: 'reached\nin Nairobi and beyond' },
   { value: 10, suffix: '+', label: 'Years of impact', sub: 'equipping a generation' },
 ]
 
@@ -363,8 +360,8 @@ export type Fellowship = {
 
 export const fellowships: Fellowship[] = [
   { id: 'f1', name: 'Along Thika Road', area: 'Thika Road, Nairobi', venue: 'Ruaraka Baptist Youth Church', region: 'Nairobi' },
-  { id: 'f2', name: 'Town / CBD', area: 'Dennis Pritt Road, Nairobi', venue: 'Biblica', region: 'Nairobi' },
-  { id: 'f3', name: 'Juja', area: 'Juja, Kiambu County', venue: 'Juja fellowship', region: 'Beyond' },
+  { id: 'f2', name: 'Town / CBD', area: 'Dennis Pritt Road, Nairobi', venue: 'Biblica Conference Centre', region: 'Nairobi' },
+  { id: 'f3', name: 'Juja', area: 'Juja, Kiambu County', venue: 'Juja fellowship', region: 'Nairobi' },
 ]
 
 export const socials = [

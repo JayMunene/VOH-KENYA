@@ -8,7 +8,7 @@ export default function Fellowships() {
         eyebrow="Fellowships"
         title="Find your people. Find your place."
         intro="We gather across Nairobi and beyond throughout the week. Pick a location to see when and where the community meets — then come as you are."
-        image="https://static.wixstatic.com/media/d185ab_39fc117d8200443a856e766540a184a1~mv2.jpg/v1/fill/w_1345,h_404,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/d185ab_39fc117d8200443a856e766540a184a1~mv2.jpg"
+        image="https://static.vecteezy.com/system/resources/previews/046/744/770/large_2x/group-of-crowd-of-christians-raise-their-hands-in-the-air-worshiping-the-cross-religion-concept-of-faith-and-prayer-with-bright-sunset-free-photo.jpg"
         crumbs={[{ label: 'Fellowships' }]}
       />
       <CommunityMap />

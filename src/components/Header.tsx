@@ -39,7 +39,7 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-5 md:px-8 h-20 flex items-center justify-between gap-6">
         <Link to="/" className="flex items-center gap-3 shrink-0" aria-label="VOH Kenya home">
-          <img src={LOGO} alt="VOH Kenya logo" className="h-9 w-9 rounded-lg object-contain bg-white/10 p-0.5" />
+          <img src={LOGO} alt="VOH Kenya logo" className="h-10 w-10 rounded-lg object-cover" />
           <div className="text-left">
             <div className="font-display font-bold text-white text-sm leading-tight tracking-tight">VOH Kenya</div>
             <div className="text-[9px] text-amber-400 tracking-[0.2em] uppercase leading-tight">Vessels of Honor</div>

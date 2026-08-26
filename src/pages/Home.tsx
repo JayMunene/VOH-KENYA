@@ -1,8 +1,34 @@
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router'
-import { motion } from 'framer-motion'
+import { motion, animate, useInView } from 'framer-motion'
 import Hero from '../components/Hero'
 import GatewayBento from '../components/GatewayBento'
 import { stats } from '../lib/data'
+
+function StatCounter({ value, suffix }: { value: number; suffix: string }) {
+  const ref = useRef<HTMLSpanElement>(null)
+  const isInView = useInView(ref, { once: true, margin: '-60px' })
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    if (!isInView) return
+
+    const controls = animate(0, value, {
+      duration: 2,
+      ease: 'easeOut',
+      onUpdate: (latest) => setCount(Math.round(latest)),
+    })
+
+    return () => controls.stop()
+  }, [isInView, value])
+
+  return (
+    <span ref={ref}>
+      {count}
+      {suffix}
+    </span>
+  )
+}
 
 export default function Home() {
   return (
@@ -12,26 +38,27 @@ export default function Home() {
       {/* Gateway directory — routes out to dedicated pages */}
       <GatewayBento />
 
-      {/* Compact impact strip */}
+      {/* Impact stats banner */}
       <section className="px-5 md:px-8 pb-20 md:pb-24">
-        <div className="max-w-7xl mx-auto rounded-[28px] bg-slate-900 px-6 md:px-10 py-10 md:py-12 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-4">
-          {stats.map((s, i) => (
-            <motion.div
-              key={s.label}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="text-center sm:text-left"
-            >
-              <div className="font-display font-extrabold text-white text-4xl md:text-5xl tracking-tight">
-                {s.value.toLocaleString('en-US')}
-                {s.suffix}
-              </div>
-              <div className="font-semibold text-amber-400 text-sm mt-1">{s.label}</div>
-              <div className="text-white/45 text-xs">{s.sub}</div>
-            </motion.div>
-          ))}
+        <div className="max-w-7xl mx-auto rounded-[32px] bg-[#071d35] px-6 md:px-10 py-8 md:py-10 shadow-[0_18px_40px_rgba(2,6,23,0.12)]">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6">
+            {stats.map((s, i) => (
+              <motion.div
+                key={s.label}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="text-center sm:text-left"
+              >
+                <div className="font-display font-extrabold text-white text-5xl md:text-7xl leading-none tracking-[-0.06em]">
+                  <StatCounter value={s.value} suffix={s.suffix} />
+                </div>
+                <div className="mt-3 font-semibold text-amber-400 text-xl md:text-2xl">{s.label}</div>
+                <div className="mt-1 text-slate-300 text-base md:text-lg leading-relaxed">{s.sub}</div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

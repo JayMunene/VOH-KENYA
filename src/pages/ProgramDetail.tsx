@@ -36,8 +36,9 @@ export default function ProgramDetail() {
             </div>
 
             {detail.video && (() => {
+              const isSpotify = detail.video.includes('spotify.com')
               const videoId = detail.video.split('/').pop()?.split('?')[0] ?? ''
-              const thumb = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
+              const thumb = isSpotify ? '/images/love-gods-way-spotify.jpg' : `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
               return (
                 <div className="mb-8">
                   <div className="inline-flex items-center gap-2 text-xs font-semibold text-amber-600 tracking-[0.2em] uppercase mb-4">
@@ -54,22 +55,8 @@ export default function ProgramDetail() {
                     <img
                       src={thumb}
                       alt={`${program.title} — featured episode`}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/25 transition-colors duration-300" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-16 h-16 rounded-full bg-white/95 group-hover:bg-amber-500 flex items-center justify-center shadow-2xl transition-colors duration-300">
-                        <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 text-slate-900 translate-x-0.5">
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </div>
-                    </div>
-                    <div className="absolute bottom-4 left-4 right-4 flex items-center gap-2">
-                      <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-red-500 shrink-0">
-                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                      </svg>
-                      <span className="text-white text-xs font-semibold drop-shadow">Watch on YouTube</span>
-                    </div>
                   </a>
                 </div>
               )

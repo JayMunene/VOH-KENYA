@@ -10,7 +10,7 @@ export default function Programs() {
         eyebrow="Our Programs"
         title="Six platforms, one community."
         intro="Each program is designed to meet you exactly where you are — in your faith, relationships, calling, and wellbeing. Explore them all and find your space."
-        image={wix(PHOTOS.f, 1920, 900)}
+        image="https://www.stpeterschurchla.org/wp-content/uploads/bfi_thumb/New-Project-36gngjuelhynh7aerq1jpm.png"
         crumbs={[{ label: 'Programs' }]}
       />
 
@@ -29,8 +29,12 @@ export default function Programs() {
                 className="group block rounded-[28px] overflow-hidden bg-slate-900 h-full"
               >
                 <div className="relative h-72 overflow-hidden">
-                  <img src={prog.image} alt={prog.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent" />
+                  <img
+                    src={prog.image}
+                    alt={prog.title}
+                    className={`w-full h-full ${prog.id === 'move' ? 'object-contain bg-white' : 'object-cover transition-transform duration-700 group-hover:scale-105'}`}
+                  />
+                  {prog.id !== 'move' && <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent" />}
                   <span className={`absolute top-4 left-4 ${prog.tagBg} px-3 py-1 rounded-full text-xs font-semibold`}>{prog.tag}</span>
                 </div>
                 <div className="p-6">

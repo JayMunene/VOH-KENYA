@@ -4,13 +4,15 @@ import PageHeader from '../components/PageHeader'
 import { wix, PHOTOS, pillars } from '../lib/data'
 
 export default function About() {
+  const fullArtworkImage = 'https://static.wixstatic.com/media/d185ab_eb41059550724662a74a0126b44f31b7~mv2.jpg/v1/fill/w_1918,h_550,al_c,q_85,enc_avif,quality_auto/Untitled%20design_edited.jpg'
+
   return (
     <>
       <PageHeader
         eyebrow="About Us"
         title="Raising a generation of role-model Christians."
         intro="Vessels of Honor (VOH Kenya) exists to influence leadership in Africa and the world by equipping teens, young adults, and professionals to become Christ-centred leaders."
-        image={wix(PHOTOS.hero, 1920, 900)}
+        image="https://static.wixstatic.com/media/d185ab_39fc117d8200443a856e766540a184a1~mv2.jpg/v1/fill/w_1600,h_480,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/d185ab_39fc117d8200443a856e766540a184a1~mv2.jpg"
         crumbs={[{ label: 'About Us' }]}
       />
 
@@ -38,70 +40,6 @@ export default function About() {
               </p>
             </div>
           </div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="relative aspect-[4/3] w-full max-w-sm overflow-hidden rounded-[28px] bg-slate-100 shadow-lg shadow-slate-900/10"
-          >
-            <img
-              src="https://static.wixstatic.com/media/d185ab_a77d925b8a6944b5be366a3a959efb92~mv2.jpg/v1/crop/x_772,y_0,w_2000,h_2000/fill/w_490,h_490,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC_0194_edited.jpg"
-              alt="VOH discipleship gathering"
-              className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-            />
-            <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/20" />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Mission / Vision */}
-      <section className="py-16 md:py-20 px-5 md:px-8 bg-slate-900">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
-          {[
-            {
-              t: 'Our Vision',
-              d: 'To influence leadership in Africa and the world by raising a generation of role-model Christians and Christ-centred leaders.',
-            },
-            {
-              t: 'Our Mission',
-              d: 'To equip and disciple young people for effective Christian living and transformational leadership in every sphere of society.',
-            },
-          ].map((b) => (
-            <div key={b.t} className="rounded-[28px] border border-white/10 bg-white/[0.03] p-8 md:p-10">
-              <div className="font-display font-bold text-amber-400 text-sm tracking-[0.2em] uppercase mb-4">{b.t}</div>
-              <p className="font-display font-bold text-white text-xl md:text-2xl leading-snug">{b.d}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Four pillars */}
-      <section className="py-20 md:py-28 px-5 md:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 text-xs font-semibold text-amber-600 tracking-[0.2em] uppercase mb-4">
-              <span className="w-6 h-px bg-amber-500" />
-              Our Mandate
-              <span className="w-6 h-px bg-amber-500" />
-            </div>
-            <h2 className="font-display font-extrabold text-slate-900 text-3xl md:text-4xl leading-tight tracking-tight">
-              Four pillars, one mission.
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {pillars.map((p) => (
-              <div key={p.id} className="flex gap-5 rounded-3xl bg-white p-6 shadow-lg shadow-slate-900/5 border border-slate-100">
-                <span className={`shrink-0 w-11 h-11 rounded-full ${p.accent} flex items-center justify-center text-sm font-bold`}>
-                  {p.num}
-                </span>
-                <div>
-                  <h3 className="font-display font-bold text-slate-900 text-lg mb-1.5">{p.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed">{p.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -116,7 +54,11 @@ export default function About() {
             Meet our founder.
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-8 lg:gap-12 items-center bg-white rounded-[28px] p-6 md:p-10 shadow-lg shadow-slate-900/5">
-            <img src={wix(PHOTOS.g, 700, 800)} alt="Pastor Timothy Nyamgero" className="rounded-3xl object-cover w-full h-full max-h-[460px]" />
+            <img
+              src="https://static.wixstatic.com/media/d185ab_c77d66f6041e400ab161b5f040a85da1~mv2.jpg/v1/fill/w_416,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/OLE_4200_edited.jpg"
+              alt="Pastor Timothy Nyamgero"
+              className="w-full max-w-[420px] h-auto max-h-[460px] rounded-3xl object-contain bg-[#f5f3ef] mx-auto"
+            />
             <div>
               <h3 className="font-display font-extrabold text-slate-900 text-2xl md:text-3xl">Pastor Timothy Nyamgero</h3>
               <div className="text-amber-600 font-semibold text-sm mt-1 mb-6">Founder &amp; Senior Pastor, VOH Kenya</div>
@@ -147,6 +89,91 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* Mission / Vision */}
+      <section className="py-16 md:py-20 px-5 md:px-8 bg-slate-900">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[
+            {
+              t: 'Our Vision',
+              d: 'To influence leadership in Africa and the world by raising a generation of role-model Christians and Christ-centred leaders.',
+            },
+            {
+              t: 'Our Mission',
+              d: 'To equip and disciple young people for effective Christian living and transformational leadership in every sphere of society.',
+            },
+          ].map((b) => (
+            <div key={b.t} className="rounded-[28px] border border-white/10 bg-white/[0.03] p-8 md:p-10">
+              <div className="font-display font-bold text-amber-400 text-sm tracking-[0.2em] uppercase mb-4">{b.t}</div>
+              <p className="font-display font-bold text-white text-xl md:text-2xl leading-snug">{b.d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Four pillars */}
+      <section className="py-20 md:py-28 px-5 md:px-8 bg-[#f5f3ef]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-display font-extrabold text-slate-900 text-3xl md:text-4xl lg:text-5xl tracking-tight uppercase">
+              Our Discipleship Programs
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4">
+            {[
+              {
+                title: 'Rooted',
+                subtitle: 'Build up!',
+                verse: 'Eph 3:14-19',
+                className: 'text-[2.7rem] leading-[0.8]',
+              },
+              {
+                title: 'Set',
+                subtitle: 'Apart',
+                verse: '2 Tim 2:20-23',
+                className: 'text-[2.7rem] leading-[0.8]',
+              },
+              {
+                title: 'Equipped',
+                subtitle: '& Empowered',
+                verse: 'Heb 13:20-21',
+                className: 'text-[2.2rem] leading-[0.85]',
+              },
+              {
+                title: 'Positioned',
+                subtitle: '& Connected',
+                verse: 'Matt 5:13-16',
+                className: 'text-[2.1rem] leading-[0.85]',
+              },
+            ].map((item) => (
+              <div key={item.verse} className="flex justify-center">
+                <div className="relative flex h-[210px] w-[210px] items-center justify-center overflow-hidden rounded-full border-[3px] border-slate-900 bg-[#f5f3ef] shadow-[0_0_0_3px_rgba(15,23,42,0.02)]">
+                  <div className="absolute inset-[18px] rounded-full border-[2px] border-slate-900/90" />
+                  <div className="relative z-10 flex flex-col items-center justify-center text-center text-slate-900 px-6">
+                    <div
+                      className={`tracking-[-0.08em] ${item.className}`}
+                      style={{
+                        fontFamily: '"Segoe Print", "Bradley Hand", "Comic Sans MS", cursive',
+                        fontStyle: 'normal',
+                        fontWeight: 700,
+                        letterSpacing: '-0.06em',
+                      }}
+                    >
+                      <div>{item.title}</div>
+                      <div>{item.subtitle}</div>
+                    </div>
+                    <div className="mt-2 text-[0.62rem] font-semibold uppercase tracking-[0.12em] text-slate-700">
+                      {item.verse}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
     </>
   )
 }

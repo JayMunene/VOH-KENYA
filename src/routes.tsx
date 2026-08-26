@@ -5,6 +5,7 @@ import About from './pages/About'
 import Leadership from './pages/Leadership'
 import Missions from './pages/Missions'
 import Programs from './pages/Programs'
+import Explore from './pages/Explore'
 import ProgramDetail from './pages/ProgramDetail'
 import Fellowships from './pages/Fellowships'
 import Partners from './pages/Partners'
@@ -24,6 +25,7 @@ export const router = createHashRouter([
       { path: 'about', Component: About },
       { path: 'leadership', Component: Leadership },
       { path: 'missions', Component: Missions },
+      { path: 'explore', Component: Explore },
       { path: 'programs', Component: Programs },
       { path: 'programs/:id', Component: ProgramDetail },
       { path: 'fellowships', Component: Fellowships },

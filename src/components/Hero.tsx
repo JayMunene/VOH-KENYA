@@ -25,14 +25,13 @@ export default function Hero() {
         <img
           src="/images/360_F_878961793_KulAKtdjeKAfP1Tm8zcIEE5Zy7RVi66Y.jpg"
           alt="Young people of VOH Kenya gathered in worship"
-          className="w-full h-full object-cover opacity-30 mix-blend-luminosity saturate-50"
+          className="w-full h-full object-cover opacity-100 contrast-125 saturate-115 brightness-90 scale-105"
         />
-        {/* Navy wash so the photo blends into the dark theme */}
-        <div className="absolute inset-0 bg-slate-950/50 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-slate-950/45 mix-blend-multiply" />
       </motion.div>
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/50 to-slate-950/90" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(2,6,23,0.85)_100%)]" />
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-amber-500/20 rounded-full blur-3xl" />
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-950/55 via-slate-950/45 to-slate-950/75" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(2,6,23,0.7)_100%)]" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[320px] bg-amber-500/10 rounded-full blur-3xl" />
 
       <motion.div
         variants={container}
@@ -40,35 +39,27 @@ export default function Hero() {
         animate="show"
         className="relative z-10 max-w-4xl mx-auto px-5 md:px-8 text-center"
       >
-        <motion.div
-          variants={rise}
-          className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-8"
-        >
-          <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-          <span className="text-xs font-medium text-white/85 tracking-wide uppercase">Garden Estate, Nairobi · Kenya</span>
-        </motion.div>
-
         <motion.h1
           variants={rise}
-          className="font-display font-extrabold text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-6"
+          className="font-display font-extrabold text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-6 drop-shadow-[0_4px_12px_rgba(0,0,0,0.75)]"
         >
           Raising a Generation of
           <br />
-          <span className="text-amber-400">Vessels of Honor.</span>
+          <span className="text-amber-400 drop-shadow-[0_4px_10px_rgba(245,158,11,0.45)]">Vessels of Honor.</span>
         </motion.h1>
 
-        <motion.p variants={rise} className="text-white/70 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-10">
+        <motion.p variants={rise} className="text-white/90 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-10 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
           Influencing leadership in Africa and the world by equipping teens, young adults, and professionals to become
           role-model Christians and Christ-centred leaders.
         </motion.p>
 
         <motion.div variants={rise} className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <MagneticButton
-            to="/programs"
+            to="/membership"
             strength={0.5}
             className="font-display font-bold text-slate-900 bg-amber-500 hover:bg-amber-400 px-8 py-3.5 rounded-full text-sm transition-colors duration-200 shadow-lg shadow-amber-500/30"
           >
-            Explore Our Programs →
+            Membership →
           </MagneticButton>
           <MagneticButton
             to="/about"
