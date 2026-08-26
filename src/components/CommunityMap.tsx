@@ -10,7 +10,8 @@ export default function CommunityMap() {
   const [active, setActive] = useState<string>(fellowships[0].id)
 
   const visible: Fellowship[] = region === 'All' ? fellowships : fellowships.filter((f) => f.region === region)
-  const activeFellowship = fellowships.find((f) => f.id === active) ?? visible[0]
+  // Keep the highlighted card and map panel in sync with the current filter.
+  const activeFellowship = visible.find((f) => f.id === active) ?? visible[0]
 
   return (
     <section id="fellowships" className="py-20 md:py-28 px-5 md:px-8 bg-slate-900">
@@ -32,7 +33,11 @@ export default function CommunityMap() {
             {regions.map((r) => (
               <button
                 key={r}
-                onClick={() => setRegion(r)}
+                onClick={() => {
+                  setRegion(r)
+                  const next = r === 'All' ? fellowships : fellowships.filter((f) => f.region === r)
+                  if (next[0]) setActive(next[0].id)
+                }}
                 className={`px-4 py-2 rounded-full text-xs font-semibold transition-colors ${
                   region === r ? 'bg-amber-500 text-slate-900' : 'text-white/70 border border-white/20 hover:border-white/50'
                 }`}

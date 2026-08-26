@@ -34,6 +34,7 @@ const socialIcons: Record<string, React.ReactElement> = {
 export default function Footer() {
   const [subscribed, setSubscribed] = useState(false)
   const [submitting, setSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
   const [email, setEmail] = useState('')
 
   return (
@@ -122,9 +123,12 @@ export default function Footer() {
               onSubmit={async (e) => {
                 e.preventDefault()
                 setSubmitting(true)
+                setSubmitError(null)
                 const result = await addSubmission('newsletter', { email })
                 setSubmitting(false)
-                if (result.ok) { setSubscribed(true); setEmail('') }
+                if (!result.ok) { setSubmitError(result.error ?? 'Something went wrong. Please try again.'); return }
+                setSubscribed(true)
+                setEmail('')
               }}
             >
               <input
@@ -145,6 +149,7 @@ export default function Footer() {
               </button>
             </form>
           )}
+          {submitError && !subscribed && <p className="text-rose-400 text-xs mt-2">{submitError}</p>}
         </div>
       </div>
 

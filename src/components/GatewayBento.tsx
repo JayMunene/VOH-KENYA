@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router'
-import { Analytics } from '@vercel/analytics/next'
 import { wix, PHOTOS } from '../lib/data'
 
 type Gate = {

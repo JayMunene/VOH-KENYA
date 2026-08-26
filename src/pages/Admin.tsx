@@ -4,12 +4,12 @@ import {
   useSubmissions,
   deleteSubmission,
   clearSubmissions,
+  adminLogin,
+  isAdminSession,
   typeLabels,
   type SubmissionType,
   type Submission,
 } from '../lib/store'
-
-const PASSCODE = 'voh2026'
 
 const badge: Record<SubmissionType, string> = {
   newsletter: 'bg-cyan-500/15 text-cyan-600 border-cyan-500/30',
@@ -33,14 +33,18 @@ function toCSV(rows: Submission[]) {
 function Gate({ onUnlock }: { onUnlock: () => void }) {
   const [value, setValue] = useState('')
   const [error, setError] = useState(false)
+  const [checking, setChecking] = useState(false)
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-slate-900 px-5 pt-20">
       <form
-        onSubmit={(e) => {
+        onSubmit={async (e) => {
           e.preventDefault()
-          if (value === PASSCODE) {
-            sessionStorage.setItem('voh_admin', '1')
+          setChecking(true)
+          // Passcode is verified server-side; the client never holds it.
+          const result = await adminLogin(value)
+          setChecking(false)
+          if (result.ok) {
             onUnlock()
           } else {
             setError(true)
@@ -64,9 +68,10 @@ function Gate({ onUnlock }: { onUnlock: () => void }) {
         {error && <p className="text-rose-400 text-xs mt-2">Incorrect passcode. Try again.</p>}
         <button
           type="submit"
-          className="w-full mt-4 font-display font-bold text-slate-900 bg-amber-500 hover:bg-amber-400 py-3.5 rounded-full text-sm transition-colors"
+          disabled={checking}
+          className="w-full mt-4 font-display font-bold text-slate-900 bg-amber-500 hover:bg-amber-400 disabled:opacity-60 py-3.5 rounded-full text-sm transition-colors"
         >
-          Unlock Dashboard
+          {checking ? 'Verifying…' : 'Unlock Dashboard'}
         </button>
       </form>
     </section>
@@ -74,8 +79,8 @@ function Gate({ onUnlock }: { onUnlock: () => void }) {
 }
 
 export default function Admin() {
-  const [unlocked, setUnlocked] = useState(() => sessionStorage.getItem('voh_admin') === '1')
-  const { submissions, loading, refresh } = useSubmissions()
+  const [unlocked, setUnlocked] = useState(() => isAdminSession())
+  const { submissions, loading, refresh } = useSubmissions(unlocked)
   const [filter, setFilter] = useState<'all' | SubmissionType>('all')
   const [query, setQuery] = useState('')
   const [deleting, setDeleting] = useState<string | null>(null)
@@ -111,7 +116,12 @@ export default function Admin() {
 
   const handleDelete = async (id: string) => {
     setDeleting(id)
-    await deleteSubmission(id)
+    const result = await deleteSubmission(id)
+    if (!result.ok && result.error === 'unauthorized') {
+      setUnlocked(false)
+      setDeleting(null)
+      return
+    }
     await refresh()
     setDeleting(null)
   }
@@ -119,7 +129,12 @@ export default function Admin() {
   const handleClear = async () => {
     if (!confirm('Clear ALL submissions? This cannot be undone.')) return
     setClearing(true)
-    await clearSubmissions()
+    const result = await clearSubmissions()
+    if (!result.ok && result.error === 'unauthorized') {
+      setUnlocked(false)
+      setClearing(false)
+      return
+    }
     await refresh()
     setClearing(false)
   }
