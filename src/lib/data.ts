@@ -16,7 +16,7 @@ const localImageMap: Record<string, string> = {
 
 export const wix = (id: string, _w: number, _h: number) => localImageMap[id] ?? '/images/about-us.jpg'
 
-export const LOGO = 'https://static.wixstatic.com/media/d185ab_9421bfb78906427486274e7863ae25bd~mv2.jpg/v1/fill/w_2500,h_2157,al_c/d185ab_9421bfb78906427486274e7863ae25bd~mv2.jpg'
+export const LOGO = '/images/voh-logo-top-left.jpg'
 export const GIVING = '/images/give-support.jpg'
 
 export const PHOTOS = {
@@ -151,7 +151,7 @@ export const programs: Program[] = [
     tag: 'Relationships',
     description: 'A biblical framework for love, dating, and relationships in the modern world.',
     detail: 'Teachings and events on love, sexuality, marriage, and family from a practical, scriptural view.',
-    image: 'https://static.wixstatic.com/media/d185ab_43925a50f3ce490ab4bdc98ddbff3636~mv2.jpg/v1/fill/w_1600,h_480,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/d185ab_43925a50f3ce490ab4bdc98ddbff3636~mv2.jpg',
+    image: '/images/story-fellowship.jpg',
     tagBg: 'bg-rose-500 text-white',
   },
   {
@@ -169,7 +169,7 @@ export const programs: Program[] = [
     tag: 'Bible Study',
     description: 'Deep dives into Scripture that build strong theological foundations for everyday life.',
     detail: 'Small-group study that turns Bible knowledge into lived, everyday discipleship.',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaPYT3QYstZzlDc1_Ysnn7IRTr7T_r3RmLXAqN6dtq9vzrI59ADVPwB3o&s=10',
+    image: '/images/bible-study-notes.jpg',
     tagBg: 'bg-slate-700 text-white',
   },
   {
@@ -178,7 +178,7 @@ export const programs: Program[] = [
     tag: 'Discipleship',
     description: 'An intensive track for those ready to go deeper and lead others in the faith.',
     detail: 'A structured pathway that forms mature disciples equipped to disciple the next generation.',
-    image: 'https://static.wixstatic.com/media/d185ab_027fb1d9b27d4281a6c83a81a7afe16b~mv2.png/v1/fill/w_404,h_398,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/2.png',
+    image: '/images/discipleship-process.png',
     tagBg: 'bg-teal-500 text-white',
   },
   {
@@ -187,7 +187,7 @@ export const programs: Program[] = [
     tag: 'Worship',
     description: 'Raising a generation of worshippers and musicians for the glory of God.',
     detail: 'Cultivating gifted worshippers and musicians who lead a generation into the presence of God.',
-    image: 'https://static.wixstatic.com/media/d185ab_2d4869875ec24d8ba9d279aee11d7fae~mv2.png/v1/crop/x_0,y_0,w_500,h_410/fill/w_386,h_316,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/2.png',
+    image: '/images/fellowships-hero.png',
     tagBg: 'bg-cyan-500 text-slate-900',
   },
 ]
