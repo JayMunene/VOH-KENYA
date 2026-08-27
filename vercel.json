@@ -25,7 +25,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://static.wixstatic.com https://img.youtube.com https://lentillestudios.com https://thebreakdownspace.org https://dnje8uc0l9vkv.cloudfront.net https://www.mybiblesong.com https://mybiblesong.com https://media.istockphoto.com https://encrypted-tbn0.gstatic.com; frame-src https://www.youtube.com; connect-src 'self' https://ofyevfyfinzdpjqrmbuv.supabase.co; media-src 'none'"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://static.wixstatic.com https://img.youtube.com https://lentillestudios.com https://thebreakdownspace.org https://dnje8uc0l9vkv.cloudfront.net https://www.mybiblesong.com https://mybiblesong.com https://media.istockphoto.com https://encrypted-tbn0.gstatic.com https://img.magnific.com; frame-src https://www.youtube.com; connect-src 'self' https://ofyevfyfinzdpjqrmbuv.supabase.co; media-src 'none'"
         }
       ]
     }
