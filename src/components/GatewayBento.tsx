@@ -18,7 +18,7 @@ const gates: Gate[] = [
     eyebrow: 'Who we are',
     title: 'About Us',
     blurb: 'Our story, vision, and the mandate that drives everything we do.',
-    image: '/images/about-us.jpg',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvDguIu_4yattsALvtWad9Qn1ESuaZu5Dd8WxL8-fAn1zbjaKGrLNjqmw&s=10',
     span: 'sm:row-span-2',
     accent: 'bg-amber-500 text-slate-900',
   },
