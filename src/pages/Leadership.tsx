@@ -16,7 +16,7 @@ export default function Leadership() {
       <section className="py-20 md:py-28 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-14 items-center">
           <img
-            src="/images/about-us-new.jpg"
+            src="https://static.wixstatic.com/media/d185ab_39fc117d8200443a856e766540a184a1~mv2.jpg/v1/fill/w_1600,h_480,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/d185ab_39fc117d8200443a856e766540a184a1~mv2.jpg"
             alt="Pastor Timothy Nyamgero"
             className="rounded-[28px] object-cover w-full h-full max-h-[560px] shadow-lg shadow-slate-900/10"
           />
