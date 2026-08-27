@@ -9,7 +9,7 @@ export default function Leadership() {
         eyebrow="Leadership"
         title="Meet the heart behind the mission."
         intro="VOH Kenya is led by people devoted to seeing a generation discipled, equipped, and released into purpose."
-        image="https://media.istockphoto.com/id/512421423/photo/group-of-people-holding-cross-and-praying-in-back-lit.jpg?s=612x612&w=0&k=20&c=L8L0zuhWP7_xGGGShvtvAbIVNorin1TJoeDVq3Rl1lU="
+        image="https://t3.ftcdn.net/jpg/18/64/01/66/360_F_1864016611_LAMdBiNtVqLw0MhD4DZZn3g7RWoBvGs4.jpg"
         compact
         crumbs={[{ label: 'About Us', to: '/about' }, { label: 'Leadership' }]}
       />

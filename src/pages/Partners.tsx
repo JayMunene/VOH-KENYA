@@ -9,7 +9,7 @@ export default function Partners() {
         eyebrow="Our Partners"
         title="Better together."
         intro="We partner with like-minded organisations who share our heart for a whole, thriving generation. Meet the teams we walk alongside in the mission."
-        image="https://media.istockphoto.com/id/512421423/photo/group-of-people-holding-cross-and-praying-in-back-lit.jpg?s=612x612&w=0&k=20&c=L8L0zuhWP7_xGGGShvtvAbIVNorin1TJoeDVq3Rl1lU="
+        image="https://t3.ftcdn.net/jpg/18/64/01/66/360_F_1864016611_LAMdBiNtVqLw0MhD4DZZn3g7RWoBvGs4.jpg"
         crumbs={[{ label: 'Partners' }]}
       />
 
