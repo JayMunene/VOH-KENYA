@@ -29,11 +29,6 @@ export default function Partners() {
               <div className="relative min-h-[260px] lg:min-h-[380px] bg-slate-900">
                 <img src={p.image} alt={`${p.name} work`} className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent" />
-                <div className="absolute bottom-5 left-5 right-5 flex items-center gap-3">
-                  <div className="bg-slate-900/70 backdrop-blur-sm rounded-xl px-3 py-2 flex items-center">
-                    <img src={p.logo} alt={`${p.name} logo`} className="h-6 w-auto object-contain" />
-                  </div>
-                </div>
               </div>
 
               <div className="p-8 md:p-10 flex flex-col justify-center">
