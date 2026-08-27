@@ -62,7 +62,7 @@ export const partners: Partner[] = [
     description:
       'A video production studio that crafts compelling visual stories for brands and ministries — from corporate profiles and commercials to event coverage and documentaries. Their creative team and quality equipment help VOH Kenya capture and share the story of what God is doing.',
     services: ['Corporate video', 'Event coverage', 'Commercials', 'Documentary storytelling'],
-    image: '/images/partners.jpg',
+    image: 'https://lentillestudios.com/wp-content/uploads/2026/05/LS-344-3.jpg',
     logo: '/images/about-us.jpg',
     href: 'https://lentillestudios.com/',
     accent: 'bg-cyan-500 text-slate-900',
