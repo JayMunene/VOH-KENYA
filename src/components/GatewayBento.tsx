@@ -36,7 +36,7 @@ const gates: Gate[] = [
     eyebrow: 'Reach & equip',
     title: 'Missions & Outreach',
     blurb: 'Partnering with communities across Kenya and Africa.',
-    image: '/images/story-fellowship.jpg',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3O_B67nkkmwL2djZQ7ivyZ2qRdlqez3KggmDElfWqpARifPJe_7Xskqg&s=10',
     span: '',
     accent: 'bg-purple-500 text-white',
   },
