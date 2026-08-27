@@ -36,7 +36,9 @@ export default function ProgramDetail() {
             </div>
 
             {detail.video && (() => {
-              const thumb = '/images/programs-discipleship.jpg'
+              const isSpotify = detail.video.includes('spotify.com')
+              const videoId = detail.video.split('/').pop()?.split('?')[0] ?? ''
+              const thumb = isSpotify ? '/images/love-gods-way-spotify.jpg' : `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
               return (
                 <div className="mb-8">
                   <div className="inline-flex items-center gap-2 text-xs font-semibold text-amber-600 tracking-[0.2em] uppercase mb-4">

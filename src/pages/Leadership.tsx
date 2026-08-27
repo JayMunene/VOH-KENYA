@@ -1,5 +1,6 @@
 import { Link } from 'react-router'
 import PageHeader from '../components/PageHeader'
+import { wix, PHOTOS } from '../lib/data'
 
 export default function Leadership() {
   return (
@@ -8,7 +9,7 @@ export default function Leadership() {
         eyebrow="Leadership"
         title="Meet the heart behind the mission."
         intro="VOH Kenya is led by people devoted to seeing a generation discipled, equipped, and released into purpose."
-        image="https://media.istockphoto.com/id/512421423/photo/group-of-people-holding-cross-and-praying-in-back-lit.jpg?s=612x612&w=0&k=20&c=L8L0zuhWP7_xGGGShvtvAbIVNorin1TJoeDVq3Rl1lU="
+        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu_FHddWktQ9RMdFXF1G72A5k1WsJ1F1l-Wx7aH9vRhg&s=10"
         compact
         crumbs={[{ label: 'About Us', to: '/about' }, { label: 'Leadership' }]}
       />
@@ -16,7 +17,7 @@ export default function Leadership() {
       <section className="py-20 md:py-28 px-5 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-14 items-center">
           <img
-            src="/images/about-us-new.jpg"
+            src="https://static.wixstatic.com/media/d185ab_39fc117d8200443a856e766540a184a1~mv2.jpg/v1/fill/w_1600,h_480,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/d185ab_39fc117d8200443a856e766540a184a1~mv2.jpg"
             alt="Pastor Timothy Nyamgero"
             className="rounded-[28px] object-cover w-full h-full max-h-[560px] shadow-lg shadow-slate-900/10"
           />

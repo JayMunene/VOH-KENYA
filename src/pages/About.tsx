@@ -4,13 +4,15 @@ import PageHeader from '../components/PageHeader'
 import { wix, PHOTOS, pillars } from '../lib/data'
 
 export default function About() {
+  const fullArtworkImage = 'https://static.wixstatic.com/media/d185ab_eb41059550724662a74a0126b44f31b7~mv2.jpg/v1/fill/w_1918,h_550,al_c,q_85,enc_avif,quality_auto/Untitled%20design_edited.jpg'
+
   return (
     <>
       <PageHeader
         eyebrow="About Us"
         title="Raising a generation of role-model Christians."
         intro="Vessels of Honor (VOH Kenya) exists to influence leadership in Africa and the world by equipping teens, young adults, and professionals to become Christ-centred leaders."
-        image="/images/about-banner.jpg"
+        image="https://static.wixstatic.com/media/d185ab_39fc117d8200443a856e766540a184a1~mv2.jpg/v1/fill/w_1600,h_480,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/d185ab_39fc117d8200443a856e766540a184a1~mv2.jpg"
         crumbs={[{ label: 'About Us' }]}
       />
 
@@ -53,7 +55,7 @@ export default function About() {
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-8 lg:gap-12 items-center bg-white rounded-[28px] p-6 md:p-10 shadow-lg shadow-slate-900/5">
             <img
-              src="/images/founder-portrait.jpg"
+              src="https://static.wixstatic.com/media/d185ab_c77d66f6041e400ab161b5f040a85da1~mv2.jpg/v1/fill/w_416,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/OLE_4200_edited.jpg"
               alt="Pastor Timothy Nyamgero"
               className="w-full max-w-[420px] h-auto max-h-[460px] rounded-3xl object-contain bg-[#f5f3ef] mx-auto"
             />
