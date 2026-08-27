@@ -19,7 +19,7 @@ export default function Leadership() {
           <img
             src="https://static.wixstatic.com/media/d185ab_8e913e3bfd174855ae7d670af54aa2b1~mv2.jpg/v1/fill/w_561,h_1350,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d185ab_8e913e3bfd174855ae7d670af54aa2b1~mv2.jpg"
             alt="Pastor Timothy Nyamgero"
-            className="rounded-[28px] object-contain object-top bg-[#eef1f7] w-full h-[620px] lg:h-[720px] shadow-lg shadow-slate-900/10"
+            className="rounded-[28px] object-cover object-top w-full h-[620px] lg:h-[720px] shadow-lg shadow-slate-900/10"
           />
           <div>
             <div className="inline-flex items-center gap-2 text-xs font-semibold text-amber-600 tracking-[0.2em] uppercase mb-4">
