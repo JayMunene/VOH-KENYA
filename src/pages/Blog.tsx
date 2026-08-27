@@ -11,7 +11,7 @@ export default function Blog() {
         eyebrow="Blog"
         title="Stories, teaching & reflection."
         intro="Insight from our team on discipleship, leadership, relationships, and mission — written for a generation learning to live for Christ."
-        image={wix(PHOTOS.i, 1920, 900)}
+        image="https://media.istockphoto.com/id/512421423/photo/group-of-people-holding-cross-and-praying-in-back-lit.jpg?s=612x612&w=0&k=20&c=L8L0zuhWP7_xGGGShvtvAbIVNorin1TJoeDVq3Rl1lU="
         crumbs={[{ label: 'Blog' }]}
       />
 

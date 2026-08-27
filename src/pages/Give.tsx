@@ -15,7 +15,7 @@ export default function Give() {
         eyebrow="Give & Support"
         title="Partner with the mission."
         intro="Your generosity fuels discipleship, missions, and youth empowerment across Kenya. Every gift helps raise the next generation of Vessels of Honor."
-        image={wix(PHOTOS.b, 1920, 900)}
+        image="https://media.istockphoto.com/id/512421423/photo/group-of-people-holding-cross-and-praying-in-back-lit.jpg?s=612x612&w=0&k=20&c=L8L0zuhWP7_xGGGShvtvAbIVNorin1TJoeDVq3Rl1lU="
         crumbs={[{ label: 'Give' }]}
       />
 
