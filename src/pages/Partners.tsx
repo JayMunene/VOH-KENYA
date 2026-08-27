@@ -14,7 +14,7 @@ export default function Partners() {
       />
 
       <section className="py-20 md:py-28 px-5 md:px-8">
-        <div className="max-w-7xl mx-auto flex flex-col gap-8">
+        <div className="max-w-[1360px] mx-auto flex flex-col gap-8">
           {partners.map((p, i) => (
             <motion.article
               key={p.id}
@@ -22,11 +22,11 @@ export default function Partners() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className={`grid grid-cols-1 lg:grid-cols-2 rounded-[28px] overflow-hidden bg-white shadow-lg shadow-slate-900/5 border border-slate-100 ${
+              className={`grid grid-cols-1 lg:grid-cols-2 lg:min-h-[620px] rounded-[28px] overflow-hidden bg-white shadow-lg shadow-slate-900/5 border border-slate-100 ${
                 i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''
               }`}
             >
-              <div className="relative min-h-[260px] lg:min-h-[380px] bg-slate-900">
+              <div className="relative min-h-[260px] lg:min-h-[620px] bg-slate-900">
                 <img src={p.image} alt={`${p.name} work`} className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent" />
                 <div className="absolute bottom-5 left-5 right-5 flex items-center gap-3">
