@@ -24,7 +24,7 @@ export default function PageHeader({ eyebrow, title, intro, image, crumbs, child
         src={image}
         alt=""
         aria-hidden
-        className={`absolute inset-0 w-full h-full ${compact ? 'object-contain' : 'object-cover'}`}
+        className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/75 to-slate-900/95" />
       <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[500px] h-[240px] bg-amber-500/15 rounded-full blur-3xl" />
