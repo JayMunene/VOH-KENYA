@@ -74,7 +74,7 @@ export const partners: Partner[] = [
     description:
       "A Christian ministry and podcast platform devoted to addiction recovery and holistic wellness. Through honest stories, forums, and media, The Breakdown Space nurtures healing and spiritual vitality for effective Christian living — a natural partner in VOH Kenya's heart for wholeness.",
     services: ['Recovery podcast', 'TBS Media Hub', 'Support forums', 'Localized content'],
-    image: 'https://thebreakdownspace.org/wp-content/uploads/2026/03/TBS-YouTube-Banner-1536x864.png',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUwIXh09SIrfiBX46Ok0gWf08MtOgcNvxoR_eT6GeGgQgQpo_5MEj6OR9N&s=10',
     logo: '/images/about-us.jpg',
     href: 'https://thebreakdownspace.org/',
     accent: 'bg-teal-500 text-white',
