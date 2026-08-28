@@ -62,7 +62,7 @@ export const partners: Partner[] = [
     description:
       'A video production studio that crafts compelling visual stories for brands and ministries — from corporate profiles and commercials to event coverage and documentaries. Their creative team and quality equipment help VOH Kenya capture and share the story of what God is doing.',
     services: ['Corporate video', 'Event coverage', 'Commercials', 'Documentary storytelling'],
-    image: 'https://lentillestudios.com/wp-content/uploads/2026/05/LS-344-3.jpg',
+    image: 'https://thebreakdownspace.org/wp-content/uploads/2026/03/TBS-YouTube-Banner-1536x864.png',
     logo: '/images/about-us.jpg',
     href: 'https://lentillestudios.com/',
     accent: 'bg-cyan-500 text-slate-900',
@@ -74,7 +74,7 @@ export const partners: Partner[] = [
     description:
       "A Christian ministry and podcast platform devoted to addiction recovery and holistic wellness. Through honest stories, forums, and media, The Breakdown Space nurtures healing and spiritual vitality for effective Christian living — a natural partner in VOH Kenya's heart for wholeness.",
     services: ['Recovery podcast', 'TBS Media Hub', 'Support forums', 'Localized content'],
-    image: 'https://thebreakdownspace.org/wp-content/uploads/2026/03/TBS-YouTube-Banner-1536x864.png',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUwIXh09SIrfiBX46Ok0gWf08MtOgcNvxoR_eT6GeGgQgQpo_5MEj6OR9N&s=10',
     logo: '/images/about-us.jpg',
     href: 'https://thebreakdownspace.org/',
     accent: 'bg-teal-500 text-white',
