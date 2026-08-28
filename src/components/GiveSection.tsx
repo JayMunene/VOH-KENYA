@@ -19,12 +19,6 @@ export default function GiveSection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="tel:+254738900218"
-                className="font-display font-bold text-slate-900 bg-amber-500 hover:bg-amber-400 px-7 py-3.5 rounded-full text-sm text-center transition-colors"
-              >
-                Give via M-PESA
-              </a>
-              <a
                 href="mailto:info@vohkenya.org?subject=Partnering%20with%20VOH%20Kenya"
                 className="font-medium text-white border border-white/25 hover:border-white/60 px-7 py-3.5 rounded-full text-sm text-center transition-colors"
               >
