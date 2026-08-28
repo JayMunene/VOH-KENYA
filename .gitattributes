@@ -16,6 +16,7 @@
 *.psd                filter=lfs diff=lfs merge=lfs -text
 *.ai                 filter=lfs diff=lfs merge=lfs -text
 *.sketch             filter=lfs diff=lfs merge=lfs -text
+public/images/the-move-logo.jpg -filter -diff -merge
 
 # ---------------------------------------------------------------------------
 # Video
