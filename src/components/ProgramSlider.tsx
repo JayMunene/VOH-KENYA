@@ -70,7 +70,7 @@ export default function ProgramSlider() {
                       src={prog.image}
                       alt={prog.title}
                       className={`absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105 ${prog.id === 'the-move' ? 'scale-[1.35]' : ''}`}
-                      style={{ objectFit: 'cover' }}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent" />
                     <span className={`absolute top-4 left-4 ${prog.tagBg} px-3 py-1 rounded-full text-xs font-semibold z-10`}>{prog.tag}</span>
