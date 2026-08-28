@@ -39,11 +39,11 @@ async function checkAdmin(c: any): Promise<Response | null> {
   return null;
 }
 
-for (const route of ["/health", "/make-server-d6d8acf9/health"]) {
+for (const route of ["/health", "/server/health", "/make-server-d6d8acf9/health"]) {
   app.get(route, (c) => c.json({ status: "ok" }));
 }
 
-for (const route of ["/admin/login", "/make-server-d6d8acf9/admin/login"]) {
+for (const route of ["/admin/login", "/server/admin/login", "/make-server-d6d8acf9/admin/login"]) {
   app.post(route, async (c) => {
     try {
       const { passcode } = await c.req.json();
@@ -57,7 +57,7 @@ for (const route of ["/admin/login", "/make-server-d6d8acf9/admin/login"]) {
   });
 }
 
-for (const route of ["/submissions", "/make-server-d6d8acf9/submissions"]) {
+for (const route of ["/submissions", "/server/submissions", "/make-server-d6d8acf9/submissions"]) {
   app.get(route, async (c) => {
     const authError = await checkAdmin(c);
     if (authError) return authError;
@@ -115,7 +115,7 @@ for (const route of ["/submissions", "/make-server-d6d8acf9/submissions"]) {
   });
 }
 
-for (const route of ["/submissions/:id", "/make-server-d6d8acf9/submissions/:id"]) {
+for (const route of ["/submissions/:id", "/server/submissions/:id", "/make-server-d6d8acf9/submissions/:id"]) {
   app.delete(route, async (c) => {
     const authError = await checkAdmin(c);
     if (authError) return authError;
