@@ -1,6 +1,9 @@
 {
   "title": "VOH Kenya | Vessels of Honor",
   "description": "This platform connects users with vital resources and information about health and wellness in Kenya, promoting community engagement and support.",
+  "icons": {
+    "icon": "https://cdn.phototourl.com/free/2026-08-28-c6787a73-cbea-4863-b182-f7a98a5ef0a6.jpg"
+  },
   "robots": {
     "index": false
   },
