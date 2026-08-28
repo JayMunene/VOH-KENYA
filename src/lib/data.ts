@@ -160,7 +160,7 @@ export const programs: Program[] = [
     tag: 'Youth Ministry',
     description: 'A high-energy gathering where teens and young adults connect, worship, and grow.',
     detail: 'Our flagship youth experience — worship, the Word, and authentic community every single week.',
-    image: '/images/the-move-logo.jpg',
+    image: '/images/the-move-logo.jpg?v=2',
     tagBg: 'bg-amber-500 text-slate-900',
   },
   {
