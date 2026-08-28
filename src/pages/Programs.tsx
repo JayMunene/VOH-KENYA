@@ -28,13 +28,13 @@ export default function Programs() {
                 to={`/programs/${prog.id}`}
                 className="group block rounded-[28px] overflow-hidden bg-slate-900 h-full"
               >
-                <div className={`relative h-72 overflow-hidden ${prog.id === 'move' || prog.id === 'masterclass' ? 'bg-slate-900' : ''}`}>
+                <div className={`relative h-72 overflow-hidden ${prog.id === 'move' || prog.id === 'masterclass' || prog.id === 'music' ? 'bg-slate-900' : ''}`}>
                   <img
                     src={prog.image}
                     alt={prog.title}
-                    className={`w-full h-full ${prog.id === 'masterclass' ? 'object-contain' : prog.id === 'move' ? 'object-cover object-center scale-[1.35] transition-transform duration-700 group-hover:scale-[1.42]' : 'object-cover transition-transform duration-700 group-hover:scale-105'}`}
+                    className={`w-full h-full ${prog.id === 'masterclass' || prog.id === 'music' ? 'object-contain' : prog.id === 'move' ? 'object-cover object-center scale-[1.35] transition-transform duration-700 group-hover:scale-[1.42]' : 'object-cover transition-transform duration-700 group-hover:scale-105'}`}
                   />
-                  {prog.id !== 'move' && prog.id !== 'masterclass' && <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent" />}
+                  {prog.id !== 'move' && prog.id !== 'masterclass' && prog.id !== 'music' && <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent" />}
                   <span className={`absolute top-4 left-4 ${prog.tagBg} px-3 py-1 rounded-full text-xs font-semibold`}>{prog.tag}</span>
                 </div>
                 <div className="p-6">

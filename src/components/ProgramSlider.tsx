@@ -69,7 +69,7 @@ export default function ProgramSlider() {
                     <img
                       src={prog.image}
                       alt={prog.title}
-                      className={`absolute inset-0 w-full h-full object-center transition-transform duration-700 group-hover:scale-105 ${prog.id === 'masterclass' ? 'object-contain' : 'object-cover'} ${prog.id === 'move' ? 'scale-[1.35]' : ''}`}
+                      className={`absolute inset-0 w-full h-full object-center transition-transform duration-700 group-hover:scale-105 ${prog.id === 'masterclass' || prog.id === 'music' ? 'object-contain' : 'object-cover'} ${prog.id === 'move' ? 'scale-[1.35]' : ''}`}
                       style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent" />
