@@ -66,7 +66,11 @@ export default function ProgramSlider() {
                   className="group relative rounded-[28px] overflow-hidden bg-slate-800 cursor-grab active:cursor-grabbing"
                 >
                   <div className="relative h-[26rem] overflow-hidden">
-                    <img src={prog.image} alt={prog.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <img
+                      src={prog.image}
+                      alt={prog.title}
+                      className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${prog.id === 'the-move' ? 'scale-125' : ''}`}
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent" />
                     <span className={`absolute top-4 left-4 ${prog.tagBg} px-3 py-1 rounded-full text-xs font-semibold z-10`}>{prog.tag}</span>
 
