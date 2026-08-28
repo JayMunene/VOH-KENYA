@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
-import { supabaseUrl } from '../../utils/supabase/info'
+import { publicAnonKey, supabaseUrl } from '../../utils/supabase/info'
 
 export type SubmissionType = 'newsletter' | 'prayer' | 'membership'
 
@@ -21,9 +21,18 @@ const BASE = `${supabaseUrl.replace(/\/$/, '')}/functions/v1/${EDGE_FUNCTION}`
 const TOKEN_KEY = 'voh_admin_token'
 const SESSION_KEY = 'voh_admin'
 
+function requestHeaders(): HeadersInit {
+  const token = sessionStorage.getItem(TOKEN_KEY)
+  return {
+    'Content-Type': 'application/json',
+    apikey: publicAnonKey,
+    Authorization: `Bearer ${token ?? publicAnonKey}`,
+  }
+}
+
 export async function checkBackend(): Promise<boolean> {
   try {
-    const response = await fetch(`${BASE}/health`, { cache: 'no-store' })
+    const response = await fetch(`${BASE}/health`, { cache: 'no-store', headers: requestHeaders() })
     return response.ok && (await response.json()).status === 'ok'
   } catch {
     return false
@@ -40,7 +49,7 @@ export async function addSubmission(
     if (!(await checkBackend())) return { ok: false, error: 'Membership service is temporarily unavailable. Please try again later.' }
     const res = await fetch(`${BASE}/submissions`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: requestHeaders(),
       body: JSON.stringify({ type, data }),
     })
     if (res.status === 429) return { ok: false, error: 'Too many requests. Please try again later.' }
@@ -63,7 +72,7 @@ export async function adminLogin(passcode: string): Promise<{ ok: boolean; error
   try {
     const res = await fetch(`${BASE}/admin/login`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: requestHeaders(),
       body: JSON.stringify({ passcode }),
     })
     if (res.status === 401) return { ok: false, error: 'Incorrect passcode.' }
@@ -83,8 +92,7 @@ export function logoutAdmin(): void {
 }
 
 function authHeaders(): HeadersInit {
-  const token = sessionStorage.getItem(TOKEN_KEY)
-  return token ? { Authorization: `Bearer ${token}` } : {}
+  return requestHeaders()
 }
 
 /* ── Admin API (auth required) ── */
