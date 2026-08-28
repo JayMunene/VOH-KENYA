@@ -14,6 +14,7 @@ export default function About() {
         intro="Vessels of Honor (VOH Kenya) exists to influence leadership in Africa and the world by equipping teens, young adults, and professionals to become Christ-centred leaders."
         image="https://static.wixstatic.com/media/d185ab_39fc117d8200443a856e766540a184a1~mv2.jpg/v1/fill/w_1600,h_480,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/d185ab_39fc117d8200443a856e766540a184a1~mv2.jpg"
         crumbs={[{ label: 'About Us' }]}
+        showBannerAccent={false}
       />
 
       {/* Our Story */}

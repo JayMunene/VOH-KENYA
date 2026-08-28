@@ -17,8 +17,7 @@ export const typeLabels: Record<SubmissionType, string> = {
 }
 
 const EDGE_FUNCTION = import.meta.env.VITE_SUPABASE_EDGE_FUNCTION ?? 'server'
-const EDGE_FUNCTION_ROUTE = import.meta.env.VITE_SUPABASE_FUNCTION_ROUTE ?? 'make-server-d6d8acf9'
-const BASE = `${supabaseUrl.replace(/\/$/, '')}/functions/v1/${EDGE_FUNCTION}/${EDGE_FUNCTION_ROUTE}`
+const BASE = `${supabaseUrl.replace(/\/$/, '')}/functions/v1/${EDGE_FUNCTION}`
 const TOKEN_KEY = 'voh_admin_token'
 const SESSION_KEY = 'voh_admin'
 

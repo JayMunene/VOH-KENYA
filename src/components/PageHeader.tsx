@@ -12,11 +12,13 @@ type Props = {
   crumbs?: Crumb[]
   children?: ReactNode
   compact?: boolean
+  showBannerAccent?: boolean
 }
 
-export default function PageHeader({ eyebrow, title, intro, image, crumbs, children, compact = false }: Props) {
+export default function PageHeader({ eyebrow, title, intro, image, crumbs, children, compact = false, showBannerAccent = true }: Props) {
   return (
     <section className={`relative overflow-hidden bg-slate-900 ${compact ? 'pt-24 pb-12 md:pt-28 md:pb-16' : 'pt-32 pb-16 md:pt-40 md:pb-24'}`}>
+      {showBannerAccent && <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-amber-500 via-yellow-300 to-transparent" />}
       <motion.img
         initial={{ scale: 1.1, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
